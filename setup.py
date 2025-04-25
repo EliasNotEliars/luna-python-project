@@ -1,13 +1,15 @@
 from setuptools import find_packages, setup
 
 # :==> Fill in your project data here
-package_name = '<LIBRARY_NAME>'
-library_webpage = '<LIBRARY_WEB_PAGE>'
-maintainer = '<YOUR_FULL_NAME>'
-maintainer_email = '<YOUR_EMAIL_ADDRESS>'
-short_description = '<BRIEF_DESCRIPTION>'
+package_name = 'duckietown_pondcleaner'
+library_webpage = 'https://github.com/EliasNotEliars/luna-python-project'
+maintainer = 'Ilyas_Haji_Abdi'
+maintainer_email = 'Ilyas.abdullahi12@gmail.com'
+short_description = 'A python package for the Luna project'
 full_description = """
-<LONG_DESCRIPTION>
+This is a python package for the Luna project. It contains all the necessary
+functions and classes to run the project. It is a simple package that is easy to
+use and understand.
 """
 
 if "<" in package_name:
@@ -40,7 +42,13 @@ version = get_version_from_source("src/duckietown_pondcleaner/__init__.py")
 # with open(dependencies_file, 'rt') as fin:
 #     dependencies = list(filter(lambda line: not line.startswith('#'), fin.read().splitlines()))
 
-install_requires = []
+install_requires = [
+    'numpy',
+    'opencv-python>=4.5.0',
+    'rospkg',
+    'duckietown-slimremote>=6.2.6'
+]
+
 tests_require = []
 
 # compile description
